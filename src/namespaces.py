@@ -27,7 +27,3 @@ city_50872 = default_world.get_namespace("http://ontology.eil.utoronto.ca/5087/2
 i72 = iso21972
 act = tove_act
 org = tove_organization
-
-# Sub namespaces in compass
-gender_ns = compass.get_namespace('http://compass/gender#')
-sex_ns = compass.get_namespace('http://compass/sex#')

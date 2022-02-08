@@ -55,8 +55,12 @@ with compass_onto:
     from code_lists import *
     from properties import *
     from classes import *
+    compass_onto.save('./compass.owl')
 
-compass_onto.save('./compass.owl')
+    # Load some examples
+    from demo import *
+    compass_onto.save('./compass-with-examples.owl')
+
 
 # temp bug fix
 file = open('./compass.owl', 'rt', encoding='utf-8')
