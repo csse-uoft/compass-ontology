@@ -1,0 +1,1680 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/tove/survey"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/tove/survey">
+    <Prefix name="" IRI="http://ontology.eil.utoronto.ca/tove/survey#"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="so" IRI="http://schema.org/"/>
+    <Prefix name="vs" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="org" IRI="http://ontology.eil.utoronto.ca/tove/organization#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="adms" IRI="http://www.w3.org/ns/adms#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="voaf" IRI="http://purl.org/vocommons/voag#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="cc:license"/>
+        <Literal>http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Mark S. Fox
+Mechanical and Industrial Engineering
+University of Toronto
+msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en">The purpose of this ontology is to provide a standard for the representation of a survey’s structure and the data acquired for communication over the Semantic Web. By using this ontology it will be possible to re-use survey data for other applications/analyses.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal xml:lang="en">Copyright © 2016 Mark S. Fox</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">Survey Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>sur</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal xml:lang="en">http://ontology.eil.utoronto.ca/tove/survey#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="adms:relatedDocumentation"/>
+        <Literal xml:lang="en">Fox, M.S., and Katsumi, M., (2016), &quot;An Ontology for Surveys&quot;, Proceedings of the Association for Survey Computing , Macer et al. (Eds.), Vol. 7.
+
+http://eil.mie.utoronto.ca/wp-content/uploads/2015/06/Fox-ASC-paper-2016.pdf</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agent_Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Close_Ended_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Comment_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfidenceQT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contingent_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contingent_Survey_Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExcuseQT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experience_Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrequencyQT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intrinsic_Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mental_Disorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non_Contingent_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non_Repeated_Survey_Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number_OEQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Open_Ended_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Perform_Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical_Disorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Possess_Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Question_Answer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Repeated_Survey_Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SatisfactionQT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Survey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurveyThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Survey_Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Survey_Response"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Text_OEQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#YearQT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#YesNoQT"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="so:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation.owl#defined_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation.owl#for_time_interval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation.owl#located_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contingentOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contingentPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contingentResponse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dataCollector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exitResponse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#focusOfSurvey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forDiagnosis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAgentProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDemographic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDiagnosis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFactitive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInstrument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProvider"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuestionComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuestionType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRespondent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasResponse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStatement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSurvey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSymptom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTreatment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nextQuestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#repeatsFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#subjectIDQuestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#subjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#surveyAnswer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#surveyFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#targetClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#targetProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#terminationResponse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#canRepeat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#endTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#forProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBaseURI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPurpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasQuestionText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRepeatPartCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasResponseString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSDemographic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSPurpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSequence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpecification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVerb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxRepeat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#referenceNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#responseData"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#targetObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#targetProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#targetValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#advised"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#afraid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#all"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#annual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bi-annual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#daily"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dissatisfied"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dont_know"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gt5year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#language_barrier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#little_confident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#long_wait_time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lt_once_month"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ltyear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mark_fox"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#na"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#never"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#no"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#no_helper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#no_need"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#no_time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#no_transport"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#none"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#not_confident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#not_near"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#other"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#problem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#refuse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#satisfied"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#semi-annual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#some"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#somewhat_confident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#too_expensive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#totally_confident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#twice_week"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#very_dissatisfied"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#very_satisfied"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weekly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#yes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1-2year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2-3times_month"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2-3year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3-4year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4-5year"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="cc:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="adms:relatedDocumentation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Agent_Property"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agent_Property"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAgentProperty"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Close_Ended_Question"/>
+        <Class IRI="#Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Close_Ended_Question"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#exitResponse"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Close_Ended_Question"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasResponse"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comment_Question"/>
+        <Class IRI="#Non_Contingent_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfidenceQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfidenceQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#little_confident"/>
+                <NamedIndividual IRI="#na"/>
+                <NamedIndividual IRI="#not_confident"/>
+                <NamedIndividual IRI="#somewhat_confident"/>
+                <NamedIndividual IRI="#totally_confident"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Question"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Question"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#contingentPart"/>
+            <Class IRI="#Contingent_Survey_Part"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Question"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#terminationResponse"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Survey_Part"/>
+        <Class IRI="#Survey_Part"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Survey_Part"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#contingentOn"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Survey_Part"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#subjectProperty"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contingent_Survey_Part"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasSequence"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disorder"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExcuseQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExcuseQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#advised"/>
+                <NamedIndividual IRI="#afraid"/>
+                <NamedIndividual IRI="#language_barrier"/>
+                <NamedIndividual IRI="#long_wait_time"/>
+                <NamedIndividual IRI="#no_helper"/>
+                <NamedIndividual IRI="#no_need"/>
+                <NamedIndividual IRI="#no_time"/>
+                <NamedIndividual IRI="#no_transport"/>
+                <NamedIndividual IRI="#not_near"/>
+                <NamedIndividual IRI="#other"/>
+                <NamedIndividual IRI="#too_expensive"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experience_Statement"/>
+        <Class IRI="#Statement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experience_Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasObject"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#focusOfSurvey"/>
+                <Class IRI="#Survey"/>
+            </ObjectExactCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrequencyQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrequencyQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#all"/>
+                <NamedIndividual IRI="#annual"/>
+                <NamedIndividual IRI="#bi-annual"/>
+                <NamedIndividual IRI="#daily"/>
+                <NamedIndividual IRI="#lt_once_month"/>
+                <NamedIndividual IRI="#na"/>
+                <NamedIndividual IRI="#none"/>
+                <NamedIndividual IRI="#problem"/>
+                <NamedIndividual IRI="#semi-annual"/>
+                <NamedIndividual IRI="#some"/>
+                <NamedIndividual IRI="#twice_week"/>
+                <NamedIndividual IRI="#weekly"/>
+                <NamedIndividual IRI="#2-3times_month"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intrinsic_Statement"/>
+        <Class IRI="#Statement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intrinsic_Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAgent"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#focusOfSurvey"/>
+                <Class IRI="#Survey"/>
+            </ObjectExactCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intrinsic_Statement"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasVerb"/>
+            <Literal>has</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intrinsic_Statement"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasVerb"/>
+            <Literal>is</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medication"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mental_Disorder"/>
+        <Class IRI="#Disorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non_Contingent_Question"/>
+        <Class IRI="#Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non_Repeated_Survey_Part"/>
+        <Class IRI="#Survey_Part"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non_Repeated_Survey_Part"/>
+        <DataHasValue>
+            <DataProperty IRI="#canRepeat"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_OEQ"/>
+        <Class IRI="#Open_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_OEQ"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasMax"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_OEQ"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasMin"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Open_Ended_Question"/>
+        <Class IRI="#Non_Contingent_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Open_Ended_Question"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasResponseString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Perform_Statement"/>
+        <Class IRI="#Statement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Perform_Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAgent"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#focusOfSurvey"/>
+                <Class IRI="#Survey"/>
+            </ObjectExactCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical_Disorder"/>
+        <Class IRI="#Disorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Possess_Statement"/>
+        <Class IRI="#Statement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Possess_Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAgent"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#focusOfSurvey"/>
+                <Class IRI="#Survey"/>
+            </ObjectExactCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasStatement"/>
+            <Class IRI="#Statement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#forProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasIdentifier"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasQuestionText"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSequence"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Survey_Part"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasResponse"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasQuestion"/>
+            <Class IRI="#Question"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#endTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRepeatPartCount"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSequence"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#startTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#targetObject"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#targetProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#targetValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Question_Answer"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasResponseString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Repeated_Survey_Part"/>
+        <Class IRI="#Survey_Part"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Repeated_Survey_Part"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#subjectIDQuestion"/>
+            <Class IRI="#Question"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Repeated_Survey_Part"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#repeatsFrom"/>
+            <Class IRI="#Question"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Repeated_Survey_Part"/>
+        <DataHasValue>
+            <DataProperty IRI="#canRepeat"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Repeated_Survey_Part"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#maxRepeat"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SatisfactionQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SatisfactionQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#dissatisfied"/>
+                <NamedIndividual IRI="#dont_know"/>
+                <NamedIndividual IRI="#satisfied"/>
+                <NamedIndividual IRI="#very_dissatisfied"/>
+                <NamedIndividual IRI="#very_satisfied"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasLocation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAgent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasDative"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFactitive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasInstrument"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasObject"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasVerb"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#endTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#startTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDemographic"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Survey_Part"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasBaseURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPurpose"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSDemographic"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSPurpose"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPart"/>
+            <ObjectUnionOf>
+                <Class IRI="#Question"/>
+                <Class IRI="#Survey_Part"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#targetClass"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#targetProperty"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#canRepeat"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Part"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSequence"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <Class IRI="#SurveyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasRespondent"/>
+            <Class abbreviatedIRI="so:Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#surveyAnswer"/>
+            <Class IRI="#Question_Answer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#dataCollector"/>
+            <Class abbreviatedIRI="so:Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasDemographic"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSurvey"/>
+            <Class IRI="#Survey"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#surveyFocus"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#endTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#referenceNumber"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Response"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#startTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Text_OEQ"/>
+        <Class IRI="#Open_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#YearQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#YearQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#gt5year"/>
+                <NamedIndividual IRI="#ltyear"/>
+                <NamedIndividual IRI="#na"/>
+                <NamedIndividual IRI="#never"/>
+                <NamedIndividual IRI="#1-2year"/>
+                <NamedIndividual IRI="#2-3year"/>
+                <NamedIndividual IRI="#3-4year"/>
+                <NamedIndividual IRI="#4-5year"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#YesNoQT"/>
+        <Class IRI="#Close_Ended_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#YesNoQT"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasResponse"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#dont_know"/>
+                <NamedIndividual IRI="#no"/>
+                <NamedIndividual IRI="#refuse"/>
+                <NamedIndividual IRI="#yes"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Close_Ended_Question"/>
+        <Class IRI="#Comment_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Close_Ended_Question"/>
+        <Class IRI="#Open_Ended_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Comment_Question"/>
+        <Class IRI="#Open_Ended_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Contingent_Question"/>
+        <Class IRI="#Non_Contingent_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Non_Repeated_Survey_Part"/>
+        <Class IRI="#Repeated_Survey_Part"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="so:Person"/>
+        <NamedIndividual IRI="#mark_fox"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contingentOn"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contingentPart"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contingentResponse"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dataCollector"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exitResponse"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#focusOfSurvey"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#forDiagnosis"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgent"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgentProperty"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDative"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDemographic"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDiagnosis"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFactitive"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLocation"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasObject"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasProvider"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasQuestion"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasQuestionComponent"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasQuestionType"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasResponse"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStatement"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSurvey"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTopic"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTreatment"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nextQuestion"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#repeatsFrom"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#subjectIDQuestion"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#subjectProperty"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#surveyAnswer"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#surveyFocus"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#targetClass"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#targetProperty"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#terminationResponse"/>
+        <ObjectProperty IRI="#SurveyObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#focusOfSurvey"/>
+        <ObjectProperty IRI="#surveyFocus"/>
+    </InverseObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#canRepeat"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#endTime"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#forProperty"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBaseURI"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasIdentifier"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMax"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMin"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasProperty"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPurpose"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasQuestionText"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRepeatPartCount"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasResponseString"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSDemographic"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSPurpose"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSequence"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSpecification"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSubject"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasVerb"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxRepeat"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#referenceNumber"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#responseData"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#startTime"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#targetObject"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#targetProperty"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#targetValue"/>
+        <DataProperty IRI="#SurveyDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/govstat.owl#Population</IRI>
+        <Literal xml:lang="en">gs:Population must identify the area in which the population resides, i.e., the city, and  what characterizes a member of the population, namely the characteristics of a Student or Teacher. For example, the characteristics of a Teacher could be:
+•	Fulltime, defined as teaching 30 or more hours per week, and
+•	Teaches at the primary or secondary level, where primary spans grades 1 thru 8 and secondary spans 9 thru 12.
+
+As depicted in Figure 11, we have extended the GovStat ontology as follows:
+•	Added a property to gs:Population, gs:located_in, that identifies the area that the Population is drawn from.
+•	Added a property to gs:Population, gs:defined_by, that identifies the class that all members of the Population are subsumed by.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Agent_Property</IRI>
+        <Literal xml:lang="en">To represent a property of the agent, we define the Agent_Property class that defines the property that the agent has. By specifying the value of hasAgentProperty to a weight, or eye colour, we can express any question about properties of the agent. Note that the value of hasAgentProperty allows for any ontology of properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Close_Ended_Question</IRI>
+        <Literal xml:lang="en">The Close_Ended_Question provides for a set of predetermined responses that the Respondent is to select from. There exist a wide variety of close ended questions found in surveys. For example, ConfidenceQT is a close ended question whose possible responses define the level of confidence elicited by the question. Five possible answers are defined, including &quot;not confident&quot; and &quot;totally confident&quot;.
+
+A Repeated_Survey_Part may repeat an unknown number of times - until some terminating criteria is met. This is captured with the exitResponse property defined in one or more close-ended questions in the repeating survey part. Any Close_Ended_Question may have one or more exitResponse values specified. If the answer matches the specified exit response, then the enclosing Repeated_Survey_Part does not repeat again. In addition, you can specify a maximum on the number of times the part is repeated using the maxRepeat property, or you can specify a Question whose answer defines the number of times the repeated survey part repeats, using the repeatsFrom property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Comment_Question</IRI>
+        <Literal xml:lang="en">The Comment_Question does not admit a response.  It provides directional text to the Interviewee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Contingent_Question</IRI>
+        <Literal xml:lang="en">Contingent_Question specifies one or more Contingent_Survey_Part&apos;s whose invocations are contingent upon the answer to a Close_Ended_Question.
+
+A related aspect of the logic of a Survey is the notion of survey termination as a result of some response.  We extend the Contingent_Question class with the terminationResponse property to capture this. If the answer matches the value of the terminationResponse, then the survey terminates. If the terminationResponse and a contingent survey part&apos;s contingentOn have the same value, then the contingent survey part is invoked first and then the survey terminates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contingent_Survey_Part</IRI>
+        <Literal xml:lang="en">Contingent_Survey_Part is a subclass of Survey_Part that contains the property contingentOn.  This property specifies one or more answers to the contingent question that will invoke this part. A Contingent_Question combined with one or more Contingent_Survey_Parts allows us to capture both the if-then and case structures that appear in some surveys. For example, in a survey about someone&apos;s daily activities, the question &quot;What is your occupation?&quot; may lead to a different set of follow-up questions depending on the answer given. A separate contingent survey part is defined for each possible answer or sets of answers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Disorder</IRI>
+        <Literal>At least within the Health domain, many questions pertain to the physical and mental condition of the survey focus, which generally is a person.  By disorder, we mean a characteristic of the survey focus as opposed to some experience or external condition.  A medical condition can be things like Angina or Heart Attack. We introduce the Disorder_Pattern class that defines the disorder(s) the survey focus (e.g., person) has. Disorder is then subdivided into physical and mental disorders.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Experience_Statement</IRI>
+        <Literal xml:lang="en">Experience Statement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Intrinsic_Statement</IRI>
+        <Literal xml:lang="en">Intrinsic Statement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Non_Contingent_Question</IRI>
+        <Literal xml:lang="en">Non_Contingent_Question_Component covers non-contingent questions is disjoint with Contingent_Question_Component.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Number_OEQ</IRI>
+        <Literal xml:lang="en">Specifies that the question expects a number between hasMin and hasMax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Open_Ended_Question</IRI>
+        <Literal xml:lang="en">The Open_Ended Question allows the Interviewee to provide any written text without constraint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Perform_Statement</IRI>
+        <Literal xml:lang="en">A perform Statement represents an activity that is performed by the agent, for example, a visit to a doctor, walking, or taking medication. The agent for this Statement is the Survey Focus that is specified by the inverse of surveyFocus in the Questionnaire.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Perform_Statement</IRI>
+        <Literal xml:lang="en">Perform Statement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Possess_Statement</IRI>
+        <Literal xml:lang="en">A possess Statement specifies that the agent owns or possesses the object, for example, leases a car or owns a house. The agent is restricted to the survey focus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Possess_Statement</IRI>
+        <Literal>Possess Statement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Question</IRI>
+        <Literal xml:lang="en">A Survey part is composed of one or more Questions, each having a sequence number within the survey part.  In order to represent questions that are contingent upon answers to prior questions, Question is divided into disjoint Contingent_Question and Non_Contingent_Question classes. Contingent_Question specifies a Survey_Part that is contingent upon the answer to a Close_Ended_Question (see next section).  If the answer matches the value of the contingentResponse property, then the contingentPart is active.
+
+The Question class lies at the core of the ontology.  It specifies the text of the question, the meaning of the question (using Statements defined in section 4), a sequence number within its enclosing Survey_Part, and a unique identifier.  The upper level of the Question taxonomy is based on Huq &amp; Karras (2003). The Question class is the root of the taxonomy with three subclasses: The Comment_Question does not admit a response. It provides directional text to the Respondent. The Open_Ended_Question allows the Respondent to provide any written text without constraint. The Close_Ended_Question provides for a set of predetermined responses that the Respondent is to select from.
+
+Question has the following properties: hasQuestionText is a data property that defines the actual question that is to be presented to the respondent, hasStatement defines the semantics of the question specified in the hasQuestionText, hasIdentifier defines the unique identifier or number that is associated with the question and also seen by the respondent, and  hasResponse (for Close_Ended_Questions only) defines the set of responses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Question_Answer</IRI>
+        <Literal xml:lang="en">Question_Answer documents each question asked and the response provided by the respondent. harPart defines the nested sequence of parts within which the question was asked.  hasQuestion identifies the Question. hasSequence specifies where in the sequence of questions it was asked. Note that hasResponseString is used if the question is open ended, otherwise hasResponse is used.
+
+Our last addition for semantic mapping is to extend Question_Answer to identify the triple that will be created. An application can then process the Question_Answer individuals to generate the RDF file. targetObject, targetProperty and targetValue are all string data properties so that they will work equally well for RDF triples and relational data models.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Repeated_Survey_Part</IRI>
+        <Literal xml:lang="en">In order to represent groups of questions that repeat, such as trips taken by a person, two types of Survey_Part are defined: Repeated_Survey_Part and Non_Repeated_Survey_Part. A Repeated_Survey_Part may repeat an unknown number of times - until some terminating criteria is met. This is captured with the exitResponse property defined in one or more close-ended questions in the repeating survey part. Any Close_Ended_Question may have one or more exitResponse values specified. If the answer matches the specified exit response, then the enclosing Repeated_Survey_Part does not repeat again. In addition, you can specify a maximum on the number of times the part is repeated using the maxRepeat property, or you can specify a Question whose answer defines the number of times the repeated survey part repeats, using the repeatsFrom property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Statement</IRI>
+        <Literal xml:lang="en">A Statement is defined for each verb in a survey, and may contain one or more of the following components (called cases). Using the example of &quot;John gave the book to Jim via email&quot;, a Statement for the verb &quot;give&quot; would contain the following cases:
+1.	An Agent, which is the instigator of the Statement and is usually the Survey Focus. (John)
+2.	An Object is usually the direct object of action verbs. For example, a disease, treatment, automobile, house. (book)
+3.	A Dative is the affected entity. (Jim)
+4.	An Instrument is the thing that is causally involved. (email)
+5.	A Factitive, which is similar to Object. But the Object is acted on by the verb whereas the Factitive is the result of the verb.  For example, house is a factitive in the phrase &quot;build house&quot; or &quot;bake a cake&quot;.
+6.	A Location where the action Statement takes place.
+7.	A Time when the Statement takes place
+Note that not all cases are relevant to a particular Statement.
+
+The representation of a Statement contains a property for each case defined above plus a hasVerb that list one or more verbs the Statement corresponds to:</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Survey</IRI>
+        <Literal xml:lang="en">The Root of the survey structure is the Survey class. It specifies that a Survey is composed or one or more parts called Survey_Part, has a purpose hasPurpose which is a text string, and identifies the demographics for the Survey via the hasDemographic property whose range is a Population defined in the Global City Indicator Foundation ontology (Fox, 2013; Fox 2015).
+
+A Survey is composed of one or more parts, Survey_Part, each having a number that defines its sequence in the survey.
+
+To support the mapping to a target ontology, Survey has an additional property, targetBaseURI, which is a string that defines the base URI for all objects and properties in the target ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Survey_Part</IRI>
+        <Literal xml:lang="en">A Survey_Part is composed of zero or more sub parts, recursively defined as Survey_Part via the hasPart property. In order to represent groups of questions that repeat, such as trips taken by a person, two types of Survey_Part are defined: Repeated_Survey_Part and Non_Repeated_Survey_Part.  The former specifies that a part can be repeated a minimum/maximum times.
+
+A Survey part is composed of one or more Questions, each having a sequence number within the survey part.
+
+Repeating survey parts are a little more tricky. For example, if a repeating survey part gathers information (e.g., age and name) for each member of a household, we would want to have a separate object created for each member, to which the attributes of the member are attached.  
+
+To support this mapping, we interpret a Survey_Part as an indication that intermediation is to be used.  In other words, another instance of a class in the target ontology is to be created to be the object of the questions contained within the survey part. We then have to provide two things:
+1.	The class that the Survey_Part is to instantiate. E.g., the Person class, which member1 and member2 are to be made instances of.
+2.	The property that links the repeatedly instantiated survey part to the surrounding part?  E.g., hasMember as in “household1 hasMember member1”,  and “household1 hasMember member2”.
+We add targetClass to Survey_Part to denote the class the Survey_Part will be an instance of (in this example Person).   targetProperty specifies how the surrounding Survey_Part (in this example household1) is to be linked to the instance of targetClass (in this example member1 and member2). If targetClass is not specified, intermediation is not invoked.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Survey_Response</IRI>
+        <Literal xml:lang="en">Instances of Survey_Response specify a respondent’s answers to a survey. The property hasSurvey links it to the specific Survey definition.  Survey_Response contains three key roles: the person who is conducting the survey (dataCollector), the person who is providing the answers (hasRespondent) and the person or thing that the questions are being asked about (surveyFocus). 
+
+We refer to the entity that the survey is gathering information about as the survey focus.  The survey focus can be anything, though we often think of a person, but the respondent is not necessarily the survey focus; it could be a product they own .  The surveyFocus property links the survey to the survey focus.  The dataCollector property identifies the person (or thing) performing the survey. The hasRespondent property identifies the person or people who answered the questions. startTime and endTime specify when the survey started and ended. referenceNumber specifies a unique identifier for the survey. Finally, surveyResponses documents each question asked and the response provided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#hasResponse</IRI>
+        <Literal xml:lang="en">hasResponse links to the Response object that defines the types of responses that are allowed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#hasTopic</IRI>
+        <Literal xml:lang="en">hasTopic provides a link to domain specific information on the topic of the question.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
