@@ -25,10 +25,9 @@ sur_onto = default_world.get_ontology("./ontologies/survey.owl").load(load_all_p
 act_50871 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/1/Activity.owl").load(load_all_properties=False)
 city_50872 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/2/City.owl").load(load_all_properties=False)
 
+sur_onto.set_location('http://ontology.eil.utoronto.ca/tove/survey.owl')
 
-compass_onto.imported_ontologies.clear()
-for onto in [cids_onto, ic_onto, schema_onto, act_50871, sur_onto]:
-    compass_onto.imported_ontologies.append(onto)
+compass_onto.imported_ontologies = [cids_onto, ic_onto, schema_onto, act_50871, sur_onto, city_50872]
 
 # Ontology Metadata
 compass_onto.metadata.preferredNamespacePrefix.append('comp')
@@ -63,16 +62,16 @@ with compass_onto:
 
 
 # temp bug fix
-file = open('./compass.owl', 'rt', encoding='utf-8')
-data = file.read()
-data = re.sub(r'<owl:imports rdf:resource=\"(.*)\"/>', r'<owl:imports rdf:resource="\1.owl"/>', data)
-data = data.replace('https://schema.org.owl',
-                    'https://schema.org/docs/schemaorg.owl')
-data = data.replace('https://www.w3.org/ns/dqv.rdf.owl', 'https://www.w3.org/ns/dqv.rdf')
-file.close()
-file = open('./compass.owl', 'wt', encoding='utf-8')
-file.write(data)
-file.close()
+# file = open('./compass.owl', 'rt', encoding='utf-8')
+# data = file.read()
+# data = re.sub(r'<owl:imports rdf:resource=\"(.*)\"/>', r'<owl:imports rdf:resource="\1.owl"/>', data)
+# data = data.replace('https://schema.org.owl',
+#                     'https://schema.org/docs/schemaorg.owl')
+# data = data.replace('https://www.w3.org/ns/dqv.rdf.owl', 'https://www.w3.org/ns/dqv.rdf')
+# file.close()
+# file = open('./compass.owl', 'wt', encoding='utf-8')
+# file.write(data)
+# file.close()
 
 
 # default_world.save()
