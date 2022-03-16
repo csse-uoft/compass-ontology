@@ -82,6 +82,10 @@ class CL_NameCause(cids.Code): pass
 
 class CL_GenderCause(cids.Code): pass
 
+class CL_CatchmentArea(cids.Code): pass
+
+class CL_SericeMode(cids.Code): pass
+
 for gender in ['agender', 'ally', 'asexual', 'bigender', 'bisexual', 'female', 'gay',
                'gender_queer', 'gender_variant', 'intersex', 'lesbian', 'male', 'pangender',
                'pansexual', 'queer', 'questioning', 'transgender', 'transsexual', 'two_spirit']:
@@ -114,6 +118,8 @@ for name in ['temporary', 'permanent']:
 for branch in ['airForce', 'army', 'navy']:
     CL_MilitaryBranch(branch)
 
+for mode in ['in-person', 'phone', 'online', 'offline']:
+    CL_SericeMode(mode)
 
 
 # TODO: Individuals for: HomelessCause, HomelessType, MaritalStatus, RiskEventType, Role

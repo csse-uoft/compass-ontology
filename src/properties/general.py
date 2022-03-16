@@ -166,6 +166,26 @@ class hasAddress(ObjectProperty):
     equivalent_to = [ic.hasAddress]
 
 
+class hasFocus(ObjectProperty):
+    pass
+
+
+class hasMode(ObjectProperty):
+    pass
+
+
+class hasRequirement(ObjectProperty):
+    pass
+
+
+class providesService(ObjectProperty):
+    pass
+
+
+class mappedTo(ObjectProperty):
+    pass
+
+
 data_properties = [
     'hasCondition', 'hasStatusStr', 'hasCauseComment'
 ]
