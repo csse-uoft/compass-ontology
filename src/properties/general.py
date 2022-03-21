@@ -1,8 +1,5 @@
 from owlready2 import *
 from src.namespaces import compass, cids, tove_organization, time, iso21972, ic
-from src.code_lists import CL_Gender, CL_Ethnicity, CL_CA_AboriginalGroup, CL_Religion, \
-    CL_EducationType, \
-    CL_ImmigrationType
 from src.utils import get_class
 
 
@@ -23,16 +20,16 @@ class hasSex(ObjectProperty):
 
 
 class hasEthnicity(ObjectProperty):
-    range = [CL_Ethnicity]
+    range = [get_class('CL-Ethnicity')]
     # python_name = 'has_ethnicity'
 
 
 class membeOfAboriginalGroup(ObjectProperty):
-    range = [CL_CA_AboriginalGroup]
+    range = [get_class('CL-CA-AboriginalGroup')]
 
 
 class hasReligion(ObjectProperty):
-    range = [CL_Religion]
+    range = [get_class('CL-Religion')]
 
 
 class hasDependent(ObjectProperty):
@@ -146,11 +143,11 @@ class hasCertification(ObjectProperty): pass
 
 
 class hasType(ObjectProperty):
-    range = [CL_EducationType]
+    range = [get_class('CL-EducationType')]
 
 
 class hasImmigrationType(ObjectProperty):
-    range = [CL_ImmigrationType]
+    range = [get_class('CL-ImmigrationType')]
 
 
 class hasProficiency(DataProperty): pass
