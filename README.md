@@ -1,5 +1,8 @@
 # compass-ontology
 
+### Latest Compass Ontology
+https://github.com/csse-uoft/compass-ontology/releases/download/latest/compass.owl
+
 ### Usage (MacOS/Unix)
 ```shell
 # Move to this directory
