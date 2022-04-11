@@ -1,6 +1,6 @@
 from owlready2 import *
-from src.namespaces import compass, cids, tove_organization, time, iso21972, ic
-from src.utils import get_class
+from ..namespaces import compass, cids, tove_organization, time, iso21972, ic
+from ..utils import get_class
 
 
 class hasName(DataProperty):

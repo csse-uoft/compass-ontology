@@ -1,1 +1,5 @@
-from .code_lists import *
+from .main import *
+
+
+def __main__():
+    pass

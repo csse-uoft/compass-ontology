@@ -50,31 +50,15 @@ compass_onto.metadata.creator.append('Mark S. Fox, msf@eil.utoronto.ca; Daniela 
 print('--------------------Loaded-------------------')
 
 with compass_onto:
-    import namespaces
-    from code_lists import *
-    from properties import *
-    from classes import *
+    import src.namespaces
+    from src.code_lists import *
+    from src.properties import *
+    from src.classes import *
     compass_onto.save('./compass.owl')
 
     # Load some examples
     # from demo import *
     # compass_onto.save('./compass-with-examples.owl')
-
-
-# temp bug fix
-# file = open('./compass.owl', 'rt', encoding='utf-8')
-# data = file.read()
-# data = re.sub(r'<owl:imports rdf:resource=\"(.*)\"/>', r'<owl:imports rdf:resource="\1.owl"/>', data)
-# data = data.replace('https://schema.org.owl',
-#                     'https://schema.org/docs/schemaorg.owl')
-# data = data.replace('https://www.w3.org/ns/dqv.rdf.owl', 'https://www.w3.org/ns/dqv.rdf')
-# file.close()
-# file = open('./compass.owl', 'wt', encoding='utf-8')
-# file.write(data)
-# file.close()
-
-
-# default_world.save()
 
 
 def print_performance():
@@ -89,5 +73,3 @@ def print_performance():
     for fun_name, (ms, times) in times:
         print(f'{fun_name} x{times} {round(ms * 1000)}ms')
 
-
-print_performance()

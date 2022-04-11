@@ -1,5 +1,5 @@
 from owlready2 import *
-from namespaces import compass, cids
+from src.namespaces import compass, cids
 
 code_lists_str = [
     'CL-Gender', 'CL-Ethnicity', 'CL-CA-AboriginalGroup', 'CL-Religion', 'CL-EducationType', 'CL-BirthStatus',
