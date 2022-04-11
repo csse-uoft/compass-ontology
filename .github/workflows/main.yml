@@ -36,7 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
+          repo: csse-uoft/compass-ontology
+          tag_name: 'inherit'
           body: Generated on ${{ steps.date.outputs.date }}
           release_name: Compass Ontology
           asset_files: ./compass.owl
