@@ -182,6 +182,10 @@ class mappedTo(ObjectProperty):
     pass
 
 
+class hasOrganization(ObjectProperty):
+    pass
+
+
 data_properties = [
     'hasCondition', 'hasStatusStr', 'hasCauseComment'
 ]
