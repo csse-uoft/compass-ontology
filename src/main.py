@@ -57,8 +57,8 @@ with compass_onto:
     compass_onto.save('./compass.owl')
 
     # Load some examples
-    from demo import *
-    compass_onto.save('./compass-with-examples.owl')
+    # from demo import *
+    # compass_onto.save('./compass-with-examples.owl')
 
 
 # temp bug fix
