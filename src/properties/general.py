@@ -11,12 +11,11 @@ class hasName(DataProperty):
 class hasGender(ObjectProperty):
     namespace = compass
     domain = []
-    range = [get_class('Gender')]  # Or [compass.CL_Gender]
-    python_name = 'has_gender'
+    range = [get_class('CL-Gender')]
 
 
 class hasSex(ObjectProperty):
-    range = [get_class('Sex')]
+    range = [get_class('CL-Sex')]
 
 
 class hasEthnicity(ObjectProperty):

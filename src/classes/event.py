@@ -42,7 +42,7 @@ ClientEvents are used to log significant events that are relevant to a Client. T
 class ServiceEvent(ClientEvent):
     label = 'Service Event'
     is_a = [
-        compass.hasStatus.max(1, compass.CL_ServiceStatus),
+        compass.hasStatus.max(1, compass['CL-ServiceStatus']),
         compass.atOrganization.exactly(1, cids.Organization),
         compass.forReferral.only(get_class('Referral'))
     ]
@@ -65,10 +65,10 @@ class Certification(Thing):
 class EducationEvent(ClientEvent):
     label = 'Education Event'
     is_a = [
-        compass.hasStatus.exactly(1, compass.CL_EducationStatus),
+        compass.hasStatus.exactly(1, compass['CL-EducationStatus']),
         compass.atOrganization.exactly(1, cids.Organization),
         compass.hasCertification.some(Certification),
-        compass.hasType.only(compass.CL_EducationType)
+        compass.hasType.only(compass['CL-EducationType'])
     ]
 
 
@@ -97,7 +97,7 @@ class EmploymentEvent(ClientEvent):
     is_a = [
         compass.atOrganization.exactly(1, cids.Organization),
         # TODO: tove_organization.holds.max(1, tove_organization.Post),
-        compass.hasStatus.exactly(1, compass.CL_EmploymentStatus)
+        compass.hasStatus.exactly(1, compass['CL-EmploymentStatus'])
     ]
 
 
@@ -130,8 +130,8 @@ class ImmigrationEvent(ClientEvent):
     label = 'Immigration Event'
     is_a = [
         compass.atOrganization.exactly(1, cids.Organization),
-        compass.hasStatus.exactly(1, compass.CL_ImmigrationStatus),
-        compass.hasImmigrationType.exactly(1, compass.CL_ImmigrationType)
+        compass.hasStatus.exactly(1, compass['CL-ImmigrationStatus']),
+        compass.hasImmigrationType.exactly(1, compass['CL-ImmigrationType'])
     ]
 
 
@@ -149,7 +149,7 @@ class MedicalEvent(ClientEvent):
     label = 'Medical Event'
     is_a = [
         compass.hasCondition.only(str),
-        compass.hasConditionTemporality.only(compass.CL_Temporality),
+        compass.hasConditionTemporality.only(compass['CL-Temporality']),
         compass.atOrganization.exactly(1, cids.Organization),
         compass.hasStatusStr.exactly(1, str)
     ]
@@ -187,8 +187,8 @@ class MilitaryEvent(EmploymentEvent):
     is_a = [
         compass.atOrganization.exactly(1, cids.Organization),
         # TODO: org:holds max 1 MilitaryPost
-        compass.hasStatus.exactly(1, compass.CL_MilitaryStatus),
-        compass.branch.only(compass.CL_MilitaryBranch)
+        compass.hasStatus.exactly(1, compass['CL-MilitaryStatus']),
+        compass.branch.only(compass['CL-MilitaryBranch'])
     ]
 
 
@@ -216,8 +216,8 @@ class RCMPEvent(EmploymentEvent):
     is_a = [
         compass.atOrganization.exactly(1, cids.Organization),
         # TODO: org:holds max 1 RCMPPost
-        compass.hasStatus.exactly(1, compass.CL_RCMPStatus),
-        compass.branch.only(compass.CL_RCMPBranch)
+        compass.hasStatus.exactly(1, compass['CL-RCMPStatus']),
+        compass.branch.only(compass['CL-RCMPBranch'])
     ]
 
 
@@ -240,8 +240,8 @@ RCMPEvent is a subclass of EmploymentEvent and adds the following properties:
 class BirthEvent(MedicalEvent):
     label = 'Birth Event'
     is_a = [
-        compass.hasStatus.exactly(1, compass.CL_BirthStatus),
-        compass.hasSex.exactly(1, compass.CL_Sex),
+        compass.hasStatus.exactly(1, compass['CL-BirthStatus']),
+        compass.hasSex.exactly(1, compass['CL-Sex']),
         compass.hasParent.max(2, cids.Person),
         compass.forPerson.exactly(1, cids.Person)
     ]
@@ -262,7 +262,7 @@ class DeathEvent(MedicalEvent):
     label = 'Death Event'
     is_a = [
         compass.forPerson.exactly(1, cids.Person),
-        compass.hasCause.only(compass.CL_DeathCause)
+        compass.hasCause.only(compass['CL-DeathCause'])
     ]
 
 
@@ -281,7 +281,7 @@ class MaritalEvent(ClientEvent):
         compass.atOrganization.max(1, cids.Organization),
         ic.hasAddress.exactly(1, ic.Address),
         compass.forPerson.exactly(1, cids.Person),
-        compass.hasStatus.exactly(1, compass.CL_MaritalStatus),
+        compass.hasStatus.exactly(1, compass['CL-MaritalStatus']),
     ]
 
 
@@ -304,8 +304,8 @@ class HousingEvent(ClientEvent):
         compass.referringProgram.max(1, cids.Program),
         ic.hasAddress.exactly(1, ic.Address),
         compass.hasPreviousAddress.exactly(1, ic.Address),
-        compass.hasHousingType.exactly(1, compass.CL_HousingType),
-        compass.hasCause.only(compass.CL_HousingCause),
+        compass.hasHousingType.exactly(1, compass['CL-HousingType']),
+        compass.hasCause.only(compass['CL-HousingCause']),
         compass.contractDate.max(1, time.Instant)
     ]
 
@@ -330,7 +330,7 @@ class NameEvent(ClientEvent):
         schema.givenName.exactly(1, str),
         schema.additionalName.only(str),
         schema.familyName.exactly(1, str),
-        compass.hasCause.only(compass.CL_NameCause),
+        compass.hasCause.only(compass['CL-NameCause']),
         compass.hasCauseComment.only(str),
     ]
 
@@ -349,7 +349,7 @@ A NameEvent captures the change of a client’s name. It has the following prope
 class GenderEvent(ClientEvent):
     label = 'Gender Event'
     is_a = [
-        compass.hasCause.only(compass.CL_GenderCause),
+        compass.hasCause.only(compass['CL-GenderCause']),
     ]
 
 
@@ -364,7 +364,7 @@ class JusticeSystemEvent(ClientEvent):
     is_a = [
         compass.atOrganization.max(1, cids.Organization),
         compass.hasStatusStr.exactly(1, str),
-        compass.eventType.only(compass.CL_JusticeSystemEventType)
+        compass.eventType.only(compass['CL-JusticeSystemEventType'])
     ]
 
 
@@ -394,7 +394,7 @@ class RiskEvent(ClientEvent):
     label = 'Risk Event'
     is_a = [
         compass.hasStatusStr.exactly(1, str),
-        compass.eventType.only(compass.CL_RiskEventType),
+        compass.eventType.only(compass['CL-RiskEventType']),
         compass.causedBy.only(Event)
     ]
 
