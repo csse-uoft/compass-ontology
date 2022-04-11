@@ -6,8 +6,8 @@ from src.utils import get_class
 class LanguageAbility(Thing):
     label = 'Language Ability'
     is_a = [
-        schema.knowsLanguage.exactly(1, get_class('CL_Languages')),
-        compass.hasProficiency.exactly(1, bool),
+        schema.knowsLanguage.exactly(1, get_class('CL-Languages')),
+        compass.hasProficiency.exactly(1, get_class('CL-LanguageProficiency')),
         compass.birthLanguage.exactly(1, bool),
         compass.homeLanguage.exactly(1, bool),
     ]
