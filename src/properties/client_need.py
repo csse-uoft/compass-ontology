@@ -138,10 +138,6 @@ class performs(ObjectProperty):
     range = [cids.Activity]
 
 
-class hasClientStatus(ObjectProperty):
-    range = [get_class('ClientStatus')]
-
-
 class providesSatisfier(ObjectProperty):
     range = [get_class('NeedSatisfier')]
 

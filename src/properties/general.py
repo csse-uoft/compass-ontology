@@ -58,8 +58,8 @@ class hasStatus(ObjectProperty):
     pass
 
 
-class hasClientState(ObjectProperty):
-    range = [get_class('ClientState')]
+class hasState(ObjectProperty):
+    pass
 
 
 class hasAcuityScore(DataProperty):
