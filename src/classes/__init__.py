@@ -15,3 +15,6 @@ from .legal_status import *
 from .service import *
 from .community import *
 from .questions_and_responses import *
+
+from .funding import *
+from .organization import *
