@@ -33,9 +33,8 @@ jobs:
       
       - name: Release & Assets
         uses: johnwbyrd/update-release@v1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: Generated on ${{ steps.date.outputs.date }}
           files: ./compass.owl
         
