@@ -6,26 +6,24 @@ from src.utils import get_class
 class Service(cids.Service):
     label = 'Service'
     is_a = [
-        compass.providedBy.min(1),
+        compass.hasRequirement.only(cids.Characteristic),
+        compass.hasFocus.only(cids.Characteristic),
+        compass.hasMode.only(compass['CL-ServiceMode']),
         compass.providesSatisfier.only(get_class('NeedSatisfier')),
-        compass.hasCost.max(1)
+
+        compass.providedBy.min(1),
+        # compass.hasCost.max(1),
     ]
 
 
 dcterms.description[Service] = """
-A Program is composed of one or more Services.  For example, a poverty reduction program can have many services with each service comprised of different activities, Inputs, Outputs and Outcomes. For the Compass service pattern, we extend the CIDS Service class with a property “providesSatisfier” for the need satisfier the service provides.
+The Compass Service class is an extension of the cids:Service class.
 
-•	act:hasSubActivity: Identifies the Activities that comprise the Service.
-•	hasInput: Identifies the Inputs to the Service.
-•	hasOutput: Identifies the Outputs of the Service.
-•	hasOutcome: Identifies the Outcomes that are specific to the Service.
-•	hasContributingStakeholder: Identifies the stakeholders that contribute to the Service.
-•	hasBeneficialStakeholder: Identifies the stakeholders that benefit from the Service.
-•	beneficiarySizeStart: Number of beneficial stakeholders at the beginning of the service time interval.
-•	beneficiarySizeEnd: Number of beneficial stakeholders at the end of the service time interval.
-•	time:hasTime: Time interval over which the service is provided.
-•	providesSatisfier: The satisfier this service provides.
-•	providedBy: The organization provides this service.
+• hasRequirement: Identifies characteristics that limit who can use the service, listed in Client taxonomy code list.
+• hasFocus: Identifies client characteristics that the service focuses on, listed in Client taxonomy code list.
+• hasMode: The mode with which the service is delivered.
+• providesSatisfier: The need satisfier this service provides.
+• providedBy: The organization provides this service.
 """
 
 
