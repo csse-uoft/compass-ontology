@@ -1,0 +1,46 @@
+name: Build and Release Ontology
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+          architecture: x64
+
+      - name: Install owlready2
+        run: pip3 install git+https://github.com/csse-uoft/owlready2.git
+
+      - name: Generate ontology
+        run: python src/main.py
+      
+      - name: Release & Assets
+        uses: Hs1r1us/Release-AIO@v1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: 'inherit'
+          body: Generated on ${{ steps.date.outputs.date }}
+          release_name: Compass Ontology
+          asset_files: ./compass.owl
+        
+    
