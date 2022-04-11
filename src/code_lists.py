@@ -7,7 +7,7 @@ code_lists_str = [
     'CL-RiskEventType', 'CL-Role', 'CL-Sex', 'CL-ImmigrationType', 'CL-Languages', 'CL-ServiceStatus',
     'CL-EducationStatus', 'CL-EmploymentStatus', 'CL-ImmigrationStatus', 'CL-Temporality', 'CL-MilitaryStatus',
     'CL-MilitaryBranch', 'CL-RCMPStatus', 'CL-RCMPBranch', 'CL-HousingType', 'CL-HousingCause', 'CL-NameCause',
-    'CL-GenderCause', 'CL-CatchmentArea', 'CL-ServiceMode'
+    'CL-GenderCause', 'CL-CatchmentArea', 'CL-ServiceMode', 'CL-LanguageProficiency'
 ]
 
 for code in code_lists_str:
@@ -47,5 +47,8 @@ for branch in ['airForce', 'army', 'navy']:
 
 for mode in ['in-person', 'phone', 'online', 'offline']:
     compass['CL-ServiceMode'](mode)
+
+for language_proficiency in ['native', 'fluent']:
+    compass['CL-LanguageProficiency'](language_proficiency)
 
 # TODO: Individuals for: HomelessCause, HomelessType, MaritalStatus, RiskEventType, Role
