@@ -9,7 +9,7 @@ cd ./modules/compass_ontology
 pip3 install git+https://github.com/csse-uoft/owlready2.git
 
 # Generate the ontology
-python -m src
+python -m src.main
 ```
 
 ### Windows

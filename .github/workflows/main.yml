@@ -31,7 +31,7 @@ jobs:
         run: pip3 install git+https://github.com/csse-uoft/owlready2.git
 
       - name: Generate ontology
-        run: python -m src
+        run: python -m src.main
       
       - name: Release & Assets
         uses: Hs1r1us/Release-AIO@v1.0
