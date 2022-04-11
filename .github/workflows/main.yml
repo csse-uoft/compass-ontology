@@ -32,14 +32,11 @@ jobs:
         run: python -m src.main
       
       - name: Release & Assets
-        uses: Hs1r1us/Release-AIO@v1.0
+        uses: johnwbyrd/update-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo: csse-uoft/compass-ontology
-          tag_name: 'inherit'
           body: Generated on ${{ steps.date.outputs.date }}
-          release_name: Compass Ontology
-          asset_files: ./compass.owl
+          asset: ./compass.owl
         
     
