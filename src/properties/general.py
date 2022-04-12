@@ -186,6 +186,10 @@ class hasOrganization(ObjectProperty):
     pass
 
 
+class hasIncome(DataProperty):
+    pass
+
+
 data_properties = [
     'hasCondition', 'hasStatusStr', 'hasCauseComment'
 ]

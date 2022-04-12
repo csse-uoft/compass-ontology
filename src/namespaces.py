@@ -21,7 +21,7 @@ xsd = default_world.get_namespace("http://www.w3.org/2001/XMLSchema#")
 dcterms = default_world.get_namespace("http://purl.org/dc/terms/")
 act_50871 = default_world.get_namespace("http://ontology.eil.utoronto.ca/5087/1/Activity")
 city_50872 = default_world.get_namespace("http://ontology.eil.utoronto.ca/5087/2/City")
-
+w3_org = default_world.get_namespace("http://www.w3.org/ns/org#")
 
 # Short Names
 i72 = iso21972
