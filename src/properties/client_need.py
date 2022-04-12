@@ -11,6 +11,10 @@ class hasTimeScale(DataProperty):
     range = [str]
 
 
+class hasTimeHorizon(DataProperty):
+   pass
+
+
 class hasStartDate(ObjectProperty):
     range = [time.DateTimeDescription]
 
@@ -21,6 +25,10 @@ class hasEndDate(ObjectProperty):
 
 class inducesClientState(ObjectProperty):
     range = [get_class('ClientState')]
+
+
+class inducesState(ObjectProperty):
+    pass
 
 
 class inducedByEvent(ObjectProperty):

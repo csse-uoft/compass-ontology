@@ -7,12 +7,20 @@ class ClientGoal(Thing):
     label = 'Client Goal'
     is_a = [
         compass.inducesNeed.only(get_class('ClientNeed')),
-        compass.hasDeadline.only(time.DateTimeDescription),
-        compass.hasTemporalHorizon.only(str)
+        # compass.hasDeadline.only(time.DateTimeDescription),
+        # compass.hasTemporalHorizon.only(str)
+        compass.inducesNeed.only(get_class('Need')),
+        compass.hasTimeHorizon.exactly(1, str),
+        cids.hasCode.only(cids.Code)
     ]
 
 
 ClientGoal.is_a.append(compass.hasSubGoal.only(ClientGoal))
 dcterms.description[ClientGoal] = """
-A client goal can consist of several sub-goals whose fulfillment would contribute to meeting the overarching goal. (Instances of type Client Goal can be linked to other ClientGoal instances via hasSubGoal.) Client goals reveal the underlying client needs. (Property inducesClientNeed links instances of type ClientNeed to the specific client goal they are related to.) 
+A client goal is a cognitive representation that includes a (desired) client state that one must deploy various means to make happen, and/or maintain, and a time horizon for achieving/maintaining it.
+
+• inducesNeed: links to instances of type Need that specify the client needs induced by the goal
+• hasTimeHorizon: specifies the timescale of the goal, e.g., short-term, long-term
+• hasSubGoal: links to instances of type Goal that specify subgoals
+• hasCode: specifies zero or more codes, created by various organizations, to identify a type of client goal.
 """

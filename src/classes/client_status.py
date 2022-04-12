@@ -7,10 +7,10 @@ class ClientStatus(Thing):
     from .client_state import ClientState
     from .event import Event
     is_a = [
-        compass.inducesClientState.only(ClientState),
-        compass.hasStartDate.only(time.DateTimeDescription),
-        compass.hasEndDate.only(time.DateTimeDescription),
-        compass.inducedByEvent.only(Event),
+        # compass.inducesClientState.only(ClientState),
+        # compass.hasStartDate.only(time.DateTimeDescription),
+        # compass.hasEndDate.only(time.DateTimeDescription),
+        # compass.inducedByEvent.only(Event),
         cids.hasCode.only(cids.Code)
     ]
 

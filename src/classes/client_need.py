@@ -45,9 +45,9 @@ class ClientNeed(Thing):
         compass.hasAcuityScore.only(str),
         compass.isExpressed.only(bool),
         compass.isNormative.only(bool),
-        compass.hasNeedType.only(str),
+        # compass.hasNeedType.only(str),
         compass.hasChangeType.only(str),
-        compass.hasFeature.only(ClientFeature),
+        # compass.hasFeature.only(ClientFeature),
         cids.hasDescription.only(str),
     ]
 

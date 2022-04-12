@@ -3,46 +3,55 @@ from src.namespaces import compass, cids, time, dcterms
 from src.utils import get_class
 
 
-class HumanState(Thing):
-    label = 'Human State'
+class PersonState(Thing):
+    label = 'Person State'
 
 
-dcterms.description[HumanState] = """
-A human state is the particular condition that someone is in at a specific time. Human states range from simple physiological states as feeling full / hungry to complex cognitive constructs, such as feeling successful in one’s chosen career.
+dcterms.description[PersonState] = """
+A person state is the particular condition that someone is in at a specific time. Human states range from simple physiological states as feeling full / hungry to complex cognitive constructs, such as feeling successful in one’s chosen career.
 """
 
 
-class ClientState(HumanState):
+class ClientState(PersonState):
     label = 'Client State'
     is_a = [
         compass.hasTimeScale.only(str),
-        compass.hasStartDate.only(time.DateTimeDescription),
-        compass.hasEndDate.only(time.DateTimeDescription),
+        # compass.hasStartDate.only(time.DateTimeDescription),
+        # compass.hasEndDate.only(time.DateTimeDescription),
         cids.hasCode.only(cids.Code)
     ]
 
 
 ClientState.is_a.append(compass.isBarrierFor.only(ClientState))
 dcterms.description[ClientState] = """
-Client states are human states that are relevant to the practice of Social Work. 
+ClientState: a person’s condition with respect to circumstances, often, but not necessarily durable or lasting, e.g., is homeless, feels anxious, feels depressed, lacks basic life skills, etc..
+
+• isBarrierFor links to instances of type ClientState that specify the other states that could be adversely affected by this state.
+• hasTimeScale: specifies the timescale of the state, e.g., “acute”, “chronic”, “short-term”, “long-term”, medium-term”.
+• hasCode: specifies zero or more codes, created by various organizations, to identify a type of state for the client.
+
 """
 
 
-class DesiredClientState(ClientState):
+class DesiredState(ClientState):
     label = 'Desired Client State'
     pass
 
 
-dcterms.description[DesiredClientState] = """
-We assume that humans prefer to be in certain states, their desired states, which, depending on the community of practice, can be divided into various core categories, e.g., survival/existence, welfare, interpersonal relatedness, flourishing. There is no consensus in the field, and many different categorizations exist.
+dcterms.description[DesiredState] = """
+DesiredClientState: a person’s desired condition, e.g.,  “(being) adequately fed”, “(living) in a safe, supportive environment”, “(being) in a good mental health state” 
 """
 
 
-class ActualClientState(ClientState):
+class ActualState(ClientState):
     label = 'Actual Client State'
     pass
 
 
-class CurrentClientState(ClientState):
-    label = 'Current Client State'
-    pass
+dcterms.description[ActualState] = """
+ActualClientState: a person’s current condition, e.g.,  “feeling hungry”, “(living) in an unsafe environment”, “(feeling) depressed”
+"""
+
+# class CurrentClientState(ClientState):
+#     label = 'Current Client State'
+#     pass
