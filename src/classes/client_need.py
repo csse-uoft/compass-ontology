@@ -6,34 +6,54 @@ from src.utils import get_class
 class NeedSatisfier(Thing):
     label = 'Need Satisfier'
     is_a = [
-        compass.forNeed.only(get_class('ClientNeed')),
-        compass.changes.only(get_class('Feature')),
-        compass.hasSatisfierType.only(str),
+        # compass.forNeed.only(get_class('ClientNeed')),
+        compass.changes.only(get_class('ClientState')),
+        compass.hasType.only(str),
         compass.hasImpact.only(str),
+        cids.hasCode.only(cids.Code),
     ]
 
 
 dcterms.description[NeedSatisfier] = """
-A need satisfier is a way of meeting client needs. In our framework, need satisfiers are provided via social services. This helps define a clear, logical relationship, between the nature of a social service, i.e., the “need satisfier’ it provides, and the target need. For example, the particular qualities of counselling (a need satisfier) allow a social worker to believe, and reasonably expect, that referring a client who suffers from acute depression and wishes to move to a state of normal functioning to a provider of counselling (e.g., a registered therapist) would assist the client with meeting their need to improve their mental health state. 
+Need satisfiers are ‘havings’ (tangibles or intangibles that can be possessed), ‘doings’(personal or collective actions, e..g., counselling, group therapy sessions, nursing care) and ‘interactings’/”settings” / “facilities” that mediate or ensure the fulfillment of a need.
 
-We divide need satisfiers in the following categories:
-•	resources (e.g., goods, money, facilities, housing)
-•	knowledge and information (e.g., training, coaching, education, legal advice)
-•	supports (e.g., companionship, supported transportation)
-
-NeedSatisfier provides the following properties:
-•	forNeed links to instances of Need that specify the client needs the satisfier (partially) fulfills
-•	changes links to instances of ClientState that specify the client states changed by the satisfier
-•	hasType identifes the type of satisfier, i.e., “Violator”, “Pseudo”, “Inhibiting”, “Singular”, “Synergistic”
-•	hasImpact: specifies the level of belief that the good or service will satisfy the need
+• changes links to instances of ClientState that specify the client states changed by the satisfier
+• hasType identifes the type of satisfier, i.e., “Violator”, “Pseudo”, “Inhibiting”, “Singular”, “Synergistic”
+• hasImpact: specifies the level of belief that the good or service will satisfy the need
+• hasCode: specifies zero or more codes, created by various organizations, to identify a type of client status.
 """
 
 
-class ClientFeature(Thing):
-    label = 'Client Feature'
+class NeedSatisfierProvision(Thing):
+    label = 'Need Satisfier Provision'
     is_a = [
-        compass.affectsClientState.only(get_class('ClientState'))
+        compass.withNeedSatisfier.only(NeedSatisfier),
+        compass.inQuantity.only(str),
+        cids.hasDescription.only(str),
+        compass.hasNote.only(str),
+
+        compass.hasStartTime.only(str),
+        compass.hasEndTime.only(str),
+        compass.hasLocation.only(str),
+
+        compass.forClient.only(get_class('Client')),
     ]
+
+
+dcterms.description[NeedSatisfierProvision] = """
+The need satisfier provision links together occurrences of needs, need satisfiers, and the services that provided the need satisfiers.
+
+• forClient: identifies the client for which this need satisfier is provided
+• withNeedSatisfier: one or more satisfiers that are provided
+• hasDescription: a description provided by the need satisfier provider
+"""
+
+
+# class ClientFeature(Thing):
+#     label = 'Client Feature'
+#     is_a = [
+#         compass.affectsClientState.only(get_class('ClientState'))
+#     ]
 
 
 class ClientNeed(Thing):

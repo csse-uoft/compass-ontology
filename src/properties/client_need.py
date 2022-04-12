@@ -12,7 +12,7 @@ class hasTimeScale(DataProperty):
 
 
 class hasTimeHorizon(DataProperty):
-   pass
+    pass
 
 
 class hasStartDate(ObjectProperty):
@@ -151,3 +151,21 @@ class providesSatisfier(ObjectProperty):
 
 
 class hasSatisfierType(DataProperty): pass
+
+
+class withNeedSatisfier(ObjectProperty): pass
+
+
+class inQuantity(DataProperty): pass
+
+
+class hasNote(DataProperty): pass
+
+
+class hasStartTime(DataProperty): pass
+
+
+class hasEndTime(DataProperty): pass
+
+
+class hasLocation(DataProperty): pass
