@@ -5,8 +5,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,13 +32,11 @@ jobs:
         run: python -m src.main
       
       - name: Release & Assets
-        uses: Hs1r1us/Release-AIO@v1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: johnwbyrd/update-release@v1.0.0
         with:
-          tag_name: 'inherit'
+          release: Latest
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: Generated on ${{ steps.date.outputs.date }}
-          release_name: Compass Ontology
-          asset_files: ./compass.owl
+          files: ./compass.owl
         
     
