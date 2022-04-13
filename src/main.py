@@ -5,7 +5,7 @@ prev = time.time()
 
 from owlready2 import *
 
-compass_onto = default_world.get_ontology("http://ontology.eil.utoronto.ca/Compass/compass#")
+compass_onto = default_world.get_ontology("http://helpseeker.co/compass#")
 
 # Load ontologies
 # default_world.get_ontology('./ontologies/Time.owl').load(load_all_properties=False)

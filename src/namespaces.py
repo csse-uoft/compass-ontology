@@ -1,6 +1,6 @@
 from owlready2 import *
 
-compass = default_world.get_ontology("http://ontology.eil.utoronto.ca/Compass/compass#")
+compass = default_world.get_ontology("http://helpseeker.co/compass#")
 schema = default_world.get_namespace("https://schema.org/")
 schema_old = default_world.get_namespace("http://schema.org/")
 tove_act = default_world.get_namespace("http://ontology.eil.utoronto.ca/tove/activity#")
