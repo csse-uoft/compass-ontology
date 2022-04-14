@@ -9,7 +9,7 @@ class receivedFrom(ObjectProperty):
     pass
 
 
-class fundersProgram(DataProperty):
+class fundersProgram(ObjectProperty):
     pass
 
 

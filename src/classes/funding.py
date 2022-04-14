@@ -7,7 +7,7 @@ class Funding(Thing):
     label = 'Funding'
     is_a = [
         compass.receivedFrom.exactly(1, get_class('Organization', compass)),  # Specifies compass.Organization
-        compass.fundersProgram.max(1, str),
+        compass.fundersProgram.max(1, cids.Program),
         time.hasTime.only(time.DateTimeInterval),
         compass.requestedAmount.exactly(1, xsd.decimal),
         compass.receivedAmount.exactly(1, xsd.decimal),
