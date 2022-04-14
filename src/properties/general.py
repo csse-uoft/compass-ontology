@@ -149,7 +149,7 @@ class hasImmigrationType(ObjectProperty):
     range = [get_class('CL-ImmigrationType')]
 
 
-class hasProficiency(DataProperty): pass
+class hasProficiency(ObjectProperty): pass
 
 
 class birthLanguage(DataProperty): pass
