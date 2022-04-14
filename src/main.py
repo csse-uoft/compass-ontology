@@ -30,8 +30,8 @@ sur_onto.set_location('http://ontology.eil.utoronto.ca/tove/survey.owl')
 compass_onto.imported_ontologies = [cids_onto, ic_onto, schema_onto, act_50871, sur_onto, city_50872]
 
 # Ontology Metadata
-compass_onto.metadata.preferredNamespacePrefix.append('comp')
-compass_onto.metadata.preferredNamespaceUri.append('http://ontology.eil.utoronto.ca/Compass/compass#')
+compass_onto.metadata.preferredNamespacePrefix.append('cp')
+compass_onto.metadata.preferredNamespaceUri.append('http://helpseeker.co/compass#')
 compass_onto.metadata.title.append('Compass Ontology')
 compass_onto.metadata.description.append("""
 The Compass ontology contains
