@@ -3,7 +3,7 @@ from src.namespaces import compass, cids, schema, tove_organization, dcterms
 from src.utils import get_class
 
 
-class Client(cids.Person, cids.Stakeholder):
+class Client(cids.Person):
     label = 'Client'
     from .language_ability import LanguageAbility
     from .client_need import ClientNeed
