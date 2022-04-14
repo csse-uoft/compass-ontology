@@ -271,9 +271,9 @@ A HousingEvent captures a single contiguous span of housing experienced by the c
 class NameEvent(ClientEvent):
     label = 'Name Event'
     is_a = [
-        schema.givenName.exactly(1, str),
+        # schema.givenName.exactly(1, str),
         schema.additionalName.only(str),
-        schema.familyName.exactly(1, str),
+        # schema.familyName.exactly(1, str),
         compass.hasCause.only(compass['CL-NameCause']),
         compass.hasCauseComment.only(str),
     ]
