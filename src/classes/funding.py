@@ -11,7 +11,7 @@ class Funding(Thing):
         time.hasTime.only(time.DateTimeInterval),
         compass.requestedAmount.exactly(1, xsd.decimal),
         compass.receivedAmount.exactly(1, xsd.decimal),
-        compass.forStakeholder.only(cids.BeneficiaryStakeholder),
+        compass.forStakeholder.only(cids.BeneficialStakeholder),
         compass.forProgram.only(cids.Program)
     ]
 
