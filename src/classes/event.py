@@ -365,7 +365,7 @@ class AppEvent(Event):
     label = 'Application Event'
     is_a = [
         compass.hasApplication.exactly(1, get_class('Application')),
-        compass.hasUserStakeholder.exactly(1, get_class('Stakeholder')),
+        compass.hasUserStakeholder.exactly(1, cids.Stakeholder),
         schema_old.dateCreated.exactly(1, xsd.dataTime),
         compass.hasSource.only(str),
         compass.hasMetaData.only(str),
