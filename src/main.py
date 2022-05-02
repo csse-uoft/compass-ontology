@@ -20,12 +20,11 @@ schema_onto = default_world.get_ontology(
     load_all_properties=False)
 cwrc_onto = default_world.get_ontology("http://sparql.cwrc.ca/ontologies/cwrc.owl").load(load_all_properties=False)
 foaf_onto = default_world.get_ontology("http://xmlns.com/foaf/spec/index.rdf").load(load_all_properties=False)
-sur_onto = default_world.get_ontology("./ontologies/survey.owl").load(load_all_properties=False)
+sur_onto = default_world.get_ontology("http://ontology.eil.utoronto.ca/Survey/survey.owl").load(load_all_properties=False)
 # dqv_onto = default_world.get_ontology("https://www.w3.org/ns/dqv.rdf").load(load_all_properties=False)
 act_50871 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/1/Activity.owl").load(load_all_properties=False)
 city_50872 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/2/City.owl").load(load_all_properties=False)
 
-sur_onto.set_location('http://ontology.eil.utoronto.ca/tove/survey.owl')
 
 compass_onto.imported_ontologies = [cids_onto, ic_onto, schema_onto, act_50871, sur_onto, city_50872]
 
