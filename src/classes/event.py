@@ -361,18 +361,17 @@ The StakeholderEvent captures events performed by stakeholders.
 """
 
 
-class AppEvent(Event):
+class ApplicationEvent(Event):
     label = 'Application Event'
     is_a = [
         compass.hasApplication.exactly(1, get_class('Application')),
         compass.hasUserStakeholder.exactly(1, cids.Stakeholder),
-        schema_old.dateCreated.exactly(1, xsd.dataTime),
         compass.hasSource.only(str),
         compass.hasMetaData.only(str),
     ]
 
 
-dcterms.description[AppEvent] = """
+dcterms.description[ApplicationEvent] = """
 Client interactions with service providers through a computer application requires logging capabilities to capture related information.
 
 • hasUserStakeholder: the stakeholder that was using the application when the event was created
@@ -382,7 +381,7 @@ Client interactions with service providers through a computer application requir
 """
 
 
-class ServiceFailureEvent(Event):
+class ServiceFailureEvent(ClientEvent):
     label = 'Service Failure Event'
     is_a = [
         compass.forService.only(cids.Service | cids.Activity),
