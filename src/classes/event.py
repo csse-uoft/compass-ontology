@@ -361,7 +361,7 @@ The StakeholderEvent captures events performed by stakeholders.
 """
 
 
-class ApplicationEvent(Event):
+class ApplicationEvent(ServiceEvent):
     label = 'Application Event'
     is_a = [
         compass.hasApplication.exactly(1, get_class('Application')),
