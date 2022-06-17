@@ -18,7 +18,7 @@ The CommunityCharacteristic references the identifying characteristics that seve
 """
 
 
-class Community(city_50872.CityDivision):
+class Community(city_50872.CityAdministrativeArea):
     label = 'Community'
     is_a = [
         compass.hasCommunityCharacteristic.only(CommunityCharacteristic)
