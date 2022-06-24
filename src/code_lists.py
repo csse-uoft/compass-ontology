@@ -51,4 +51,7 @@ for mode in ['in-person', 'phone', 'online', 'offline']:
 for language_proficiency in ['native', 'fluent']:
     compass['CL-LanguageProficiency'](language_proficiency)
 
+for language in ['english', 'french']:
+    compass['CL-Languages'](language)
+
 # TODO: Individuals for: HomelessCause, HomelessType, MaritalStatus, RiskEventType, Role

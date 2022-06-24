@@ -190,6 +190,10 @@ class hasIncome(DataProperty):
     pass
 
 
+class hasLanguage(ObjectProperty):
+    pass
+
+
 data_properties = [
     'hasCondition', 'hasStatusStr', 'hasCauseComment'
 ]

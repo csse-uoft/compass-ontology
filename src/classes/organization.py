@@ -6,7 +6,8 @@ from src.utils import get_class
 class Organization(cids.Organization):
     label = 'Organization'
     is_a = [
-        compass.hasFunding.only(get_class('Funding'))
+        compass.hasFunding.only(get_class('Funding')),
+        compass.hasLanguage.only(get_class('CL-Language'))
     ]
 
 
