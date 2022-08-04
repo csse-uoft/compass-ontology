@@ -13,7 +13,7 @@ class Client(cids.Person):
 
     is_a = [
         compass.satisfiesStakeholder.only(cids.Stakeholder),
-        compass.hasGender.max(1, compass.Gender),
+        compass.hasGender.max(1, compass['CL-Gender']),
         # compass.hasSex.max(1, compass.Sex),
         compass.hasEthnicity.only(compass['CL-Ethnicity']),
         compass.membeOfAboriginalGroup.only(compass['CL-CA-AboriginalGroup']),
