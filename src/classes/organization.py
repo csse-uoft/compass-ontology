@@ -9,6 +9,7 @@ class Organization(cids.Organization):
         compass.hasFunding.only(get_class('Funding')),
         compass.hasLanguage.only(get_class('CL-Language')),
         ic.hasEmail.only(str),
+        ic.hasOperatingHours.only(ic.HoursOfOperation),
     ]
 
 
@@ -18,4 +19,5 @@ The Compass Organization extends cids:Organization with funding information.
 • hasFunding: links to instances of Funding that specify the funding received by the organization.
 • hasLanguage: Language for the Organization.
 • hasEmail: Email for the Organization.
+• hasOperatingHours: Hours of operation for the Organization.
 """

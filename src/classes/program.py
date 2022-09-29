@@ -8,6 +8,7 @@ class Program(cids.Program):
     is_a = [
         ic.hasAddress.only(ic.Address),
         ic.hasEmail.only(str),
+        ic.hasOperatingHours.only(ic.HoursOfOperation),
     ]
 
 
@@ -17,4 +18,5 @@ For example, a “health” service can set up multiple offices closer to its cl
 
 • hasAddress: Address for the program.
 • hasEmail: Email for the program.
+• hasOperatingHours: Hours of operation for the program.
 """

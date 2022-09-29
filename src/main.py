@@ -19,7 +19,7 @@ schema_onto = default_world.get_ontology(
     "https://schema.org/docs/schemaorg.owl").load(
     load_all_properties=False)
 cwrc_onto = default_world.get_ontology("http://sparql.cwrc.ca/ontologies/cwrc.owl").load(load_all_properties=False)
-foaf_onto = default_world.get_ontology("https://xmlns.com/foaf/spec/20140114.rdf").load(load_all_properties=False)
+# foaf_onto = default_world.get_ontology("https://xmlns.com/foaf/spec/20140114.rdf").load(load_all_properties=False)
 sur_onto = default_world.get_ontology("http://ontology.eil.utoronto.ca/Survey/survey.owl").load(load_all_properties=False)
 # dqv_onto = default_world.get_ontology("https://www.w3.org/ns/dqv.rdf").load(load_all_properties=False)
 act_50871 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/1/Activity.owl").load(load_all_properties=False)
