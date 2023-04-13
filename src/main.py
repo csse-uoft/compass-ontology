@@ -26,9 +26,10 @@ sur_onto = default_world.get_ontology("http://ontology.eil.utoronto.ca/Survey/su
 # dqv_onto = default_world.get_ontology("https://www.w3.org/ns/dqv.rdf").load(load_all_properties=False)
 act_50871 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/1/Activity.owl").load(load_all_properties=False)
 city_50872 = default_world.get_ontology("http://ontology.eil.utoronto.ca/5087/2/City.owl").load(load_all_properties=False)
+w3c_org = default_world.get_ontology("http://www.w3.org/ns/org").load(load_all_properties=False)
 
 
-compass_onto.imported_ontologies = [cids_onto, ic_onto, schema_onto, act_50871, sur_onto, city_50872]
+compass_onto.imported_ontologies = [cids_onto, ic_onto, schema_onto, act_50871, sur_onto, city_50872, w3c_org]
 
 # Ontology Metadata Namespaces
 vann = default_world.get_namespace("http://purl.org/vocab/vann/")
